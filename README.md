@@ -5,6 +5,8 @@ Analyze your exported WhatsApp chats with an interactive Streamlit app. Get mess
 ---
 ## Demo : https://whatsapp-chat-analyzer-afpv9rz6xrfyzazhtzlnkn.streamlit.app/
 
+---
+
 ## Features
 
 - **Top stats**: total messages, words, media, links
