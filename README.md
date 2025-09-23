@@ -3,6 +3,7 @@
 Analyze your exported WhatsApp chats with an interactive Streamlit app. Get message statistics, timelines, activity heatmaps, most common words, and emoji usage — with robust parsing and proper emoji rendering on Windows/macOS/Linux.
 
 ---
+## Demo : https://whatsapp-chat-analyzer-afpv9rz6xrfyzazhtzlnkn.streamlit.app/
 
 ## Features
 
