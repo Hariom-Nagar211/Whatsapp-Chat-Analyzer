@@ -1,9 +1,9 @@
 import re
 import pandas as pd
 
-def preprocess(data):
+de preprocess(data:
     pattern = r"(?m)\d{1,2}/\d{1,2}/\d{2,4},\s+\d{1,2}:\d{2}\s*(?:AM|PM|am|pm)\s*-\s"
-    messages = re.split(pattern, data)[1:]
+    messages = re.split(pattern, data[1:
     dates = re.findall(pattern, data)
 
     df = pd.DataFrame({'user_message': messages, 'message_date': dates})
