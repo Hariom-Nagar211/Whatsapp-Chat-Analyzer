@@ -4,14 +4,14 @@ import pandas as pd
 from collections import Counter
 import emoji
 
-extract = URLExtract(
+extract = URLExtract()
 
 # Version-compatible emoji extraction helper
-de extract_emojis(text: str):
+def extract_emojis(text: str):
     """Return a list of emojis found in text, compatible with emoji v1.x and v2.x+."""
     # Preferred: emoji.emoji_list (v2.x)
     if hasattr(emoji, 'emoji_list'):
-        tr:
+        try:
             return [e['emoji'] for e in emoji.emoji_list(text)]
         except Exception:
             pass
