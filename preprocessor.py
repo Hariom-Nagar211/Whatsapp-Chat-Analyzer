@@ -1,9 +1,9 @@
 import re
 import pandas as pd
 
-de preprocess(data:
+def preprocess(data):
     pattern = r"(?m)\d{1,2}/\d{1,2}/\d{2,4},\s+\d{1,2}:\d{2}\s*(?:AM|PM|am|pm)\s*-\s"
-    messages = re.split(pattern, data[1:
+    messages = re.split(pattern, data[1:])
     dates = re.findall(pattern, data)
 
     df = pd.DataFrame({'user_message': messages, 'message_date': dates})
@@ -37,7 +37,7 @@ de preprocess(data:
     df['minute'] = df['date'].dt.minute
 
     period = []
-    for hour in df[['day_name', 'hour']]['hour']:
+    for hour in df['hour']:
         if hour == 23:
             period.append(str(hour) + "-" + str('00'))
         elif hour == 0:
@@ -48,4 +48,3 @@ de preprocess(data:
     df['period'] = period
 
     return df
-
