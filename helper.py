@@ -7,13 +7,13 @@ import emoji
 extract = URLExtract()
 
 # Version-compatible emoji extraction helper
-ef extract_emojis(text: str):
+def extract_emojis(text: str):
     """Return a list of emojis found in text, compatible with emoji v1.x and v2.x+."""
     # Preferred: emoji.emoji_list (v2.x)
-    f hasattr(emoji, 'emoji_list'):
-    try:
+    if hasattr(emoji, 'emoji_list'):
+        try:
             return [e['emoji'] for e in emoji.emoji_list(text)]
-        xcept Exception:
+        except Exception:
             pass
 
     # Fallback: regex extractor available in many versions
